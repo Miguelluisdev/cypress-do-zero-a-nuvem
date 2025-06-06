@@ -50,4 +50,19 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
  cy.get('.error').should('be.visible')
   })
+
+  
+  it('preenche e limpa os campos nome, sobrenome, email e telefone' , () => {
+   cy.get('#firstName')
+   .type('Miguel')
+   .should('have.value' , 'Miguel')
+   .clear()
+   .should('have.value' , '')
+  })
+
+  it('envia o formuário com sucesso usando um comando customizado' , () => {
+    cy.fillMandatoryFieldsAndSubmit()
+
+    cy.get('.success').should('be.visible')
+  })
 })
