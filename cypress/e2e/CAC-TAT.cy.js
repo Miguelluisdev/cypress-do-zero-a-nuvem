@@ -1,3 +1,4 @@
+// sessão 1 Digitando em campos e clicando em elementos
 describe('Central de Atendimento ao Cliente TAT', () => {
   beforeEach(()=> {
     cy.visit('./src/index.html')
