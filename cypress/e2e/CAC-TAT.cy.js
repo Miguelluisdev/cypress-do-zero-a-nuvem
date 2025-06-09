@@ -45,7 +45,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
   cy.get('#email').type('darius@gmail.com').should('have.value' , 'darius@gmail.com')
   cy.get('#open-text-area').type(longText , {delay: 0})
   // .should('have.value' , 'mensagem extra')
-  cy.get('#phone-checkbox').click()
+  cy.get('#phone-checkbox').check()
   cy.get('button[type="submit"]').click()
 
 
