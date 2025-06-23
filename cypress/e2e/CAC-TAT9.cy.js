@@ -18,4 +18,16 @@ describe("exibe mensagem por 3 segundos", () => {
     cy.get("@getRequest").its("body")
         .should('include' , 'CAC TAT')
   });
+
+ it('encontrando o gato' , () => {
+  
+  cy.get('#cat')
+  .invoke('show')
+  .should('be.visible')
+  
+  cy.get('#title')
+   .invoke('text', 'cat-tat')
+   .should('be.visible' , 'cat-tat')
+ })
+
 });
